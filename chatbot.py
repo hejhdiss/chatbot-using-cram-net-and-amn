@@ -32,13 +32,39 @@ INTENTS = {
 }
 
 TRAIN_MAP = {
-    "hi": "greeting", "hello": "greeting", "hey": "greeting",
-    "bye": "farewell", "goodbye": "farewell", "see you": "farewell",
-    "how are you": "wellbeing", "how are you doing": "wellbeing",
-    "who are you": "identity", "what are you": "identity",
-    "what can you do": "ability", "what is your job": "ability",
-    "i am sad": "emotion", "i feel bad": "emotion",
-    "thanks": "thanks", "thank you": "thanks",
+    # GREETING
+    "hi": "greeting", "hello": "greeting", "hey": "greeting", "yo": "greeting",
+    "good morning": "greeting", "good evening": "greeting", "greetings": "greeting",
+    "hi there": "greeting", "hello friend": "greeting",
+
+    # FAREWELL
+    "bye": "farewell", "goodbye": "farewell", "see you": "farewell", "laters": "farewell",
+    "farewell": "farewell", "catch you later": "farewell", "i'm leaving": "farewell",
+    "talk soon": "farewell", "bye bye": "farewell",
+
+    # WELLBEING
+    "how are you": "wellbeing", "how are you doing": "wellbeing", "how's it going": "wellbeing",
+    "are you okay": "wellbeing", "you good": "wellbeing", "everything alright": "wellbeing",
+    "how have you been": "wellbeing",
+
+    # IDENTITY
+    "who are you": "identity", "what are you": "identity", "tell me about yourself": "identity",
+    "are you a person": "identity", "are you human": "identity", "who am i talking to": "identity",
+    "your name": "identity",
+
+    # ABILITY
+    "what can you do": "ability", "what is your job": "ability", "how can you help": "ability",
+    "what are your features": "ability", "what's your purpose": "ability", "can you talk": "ability",
+    "show me what you can do": "ability",
+
+    # EMOTION
+    "i am sad": "emotion", "i feel bad": "emotion", "i'm unhappy": "emotion",
+    "i'm depressed": "emotion", "i am crying": "emotion", "feeling lonely": "emotion",
+    "today was rough": "emotion", "i'm frustrated": "emotion",
+
+    # THANKS
+    "thanks": "thanks", "thank you": "thanks", "thx": "thanks", "much appreciated": "thanks",
+    "i appreciate it": "thanks", "cheers": "thanks", "thanks a lot": "thanks",
 }
 
 ALL_TEXT = list(TRAIN_MAP.keys()) + [r for responses in INTENTS.values() for r in responses]
